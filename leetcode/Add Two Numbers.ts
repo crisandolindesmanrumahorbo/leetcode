@@ -1,11 +1,4 @@
-class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
+import { ListNode, printList } from './types';
 
 const reverseLinkedList = (head: ListNode) => {
   let curr = head;
@@ -22,16 +15,6 @@ const reverseLinkedList = (head: ListNode) => {
   }
   return prev;
 };
-
-function printList(node: ListNode | null) {
-  let result = [];
-  while (node !== null) {
-    // console.log({node})
-    result.push(node.val);
-    node = node.next;
-  }
-  console.log(result.join(' -> '));
-}
 
 // CARA 1 masih error
 function addTwoNumbers(l1: ListNode, l2: ListNode): ListNode | null {
@@ -100,6 +83,7 @@ head2.next.next = new ListNode(4);
 
 function addTwoNumbers(l1: ListNode, l2: ListNode): ListNode | null {
   const total = getNumber(l1) + getNumber(l2);
+  let a= Math.sqrt(11)
   return toLinkedList(total);
 }
 
